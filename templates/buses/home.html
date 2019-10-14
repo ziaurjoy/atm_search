@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Bus List</h2>
+<a href="/create">Create</a>
+{% for bus in buses %}
+<ul>
+    <li>
+        <strong>{{ bus.name }} </strong> -
+        - {{ bus.head_office }} -
+        - {{ bus.starft_count }}
+        <a href="/update/{{ bus.id }} ">Edit</a>
+        <a href="/delete/{{ bus.id }} ">Delete</a>
+    </li>
+</ul>
+{% endfor %}
+{% endblock %}
